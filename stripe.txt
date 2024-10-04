@@ -26,8 +26,6 @@ Blade:
 
 .env
 -----------------------------
-STRIPE_TEST_PK=pk_test_51OFZ3zI3hY1Jc4DzUtimeKqiANmmSvju1Rtkz2HxqY0pySZx3fVkpGUyB0r8w0OBI5jejmJPjoVGgrLhrO3tItnG00OhIjk4Dw
-
 
 config > stripe.php
 -----------------------------

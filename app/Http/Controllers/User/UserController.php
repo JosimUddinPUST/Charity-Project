@@ -9,8 +9,8 @@ use App\Models\Event;
 use App\Models\EventTicket;
 use App\Models\Cause;
 use App\Models\CauseDonation;
-use Hash;
-use Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {

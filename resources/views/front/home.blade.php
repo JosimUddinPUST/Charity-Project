@@ -60,7 +60,7 @@
 </div>
 @endif
 
-@if($home_page_item->cause_status == 'Show')
+@if(optional($home_page_item)->cause_status == 'Show')
 <div class="cause pt_70">
     <div class="container">
         

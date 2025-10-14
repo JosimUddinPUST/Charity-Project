@@ -27,7 +27,20 @@ class HomeController extends Controller
         $testimonial_section_item=TestimonialSectionItem::where('id',1)->first();
         $testimonials= Testimonial::get();
         
+        // Ensure $home_page_item is always an object to avoid "attempt to read property on null" errors in views.
         $home_page_item = HomePageItem::where('id',1)->first();
+        if (! $home_page_item) {
+            // Create an in-memory instance with safe defaults (do not persist automatically).
+            $home_page_item = new HomePageItem();
+            $home_page_item->cause_status = 'Hide';
+            $home_page_item->cause_heading = '';
+            $home_page_item->cause_subheading = '';
+            $home_page_item->feature_background = '';
+            $home_page_item->feature_status = 'Hide';
+            $home_page_item->event_status = 'Hide';
+            $home_page_item->testimonial_status = 'Hide';
+            $home_page_item->blog_status = 'Hide';
+        }
         $featured_causes = Cause::where('is_featured','Yes')->get();
         $events = Event::take(3)->get();
         $posts = Post::orderBy('id', 'desc')->take(3)->get();

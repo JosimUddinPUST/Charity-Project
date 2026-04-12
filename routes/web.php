@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Artisan;
 
 use App\Http\Controllers\ProfileController;
 
@@ -233,31 +231,4 @@ Route::prefix('admin')->group(function () {
     Route::post('/forget-password-submit', [AdminController::class, 'forget_password_submit'])->name('admin_forget_password_submit');
     Route::get('/reset-password/{token}/{email}', [AdminController::class, 'reset_password'])->name('admin_reset_password');
     Route::post('/reset-password-submit', [AdminController::class, 'reset_password_submit'])->name('admin_reset_password_submit');
-});
-
-Route::get('/debug-db', function () {
-    return DB::select('SELECT table_name FROM information_schema.tables WHERE table_schema = \'public\'');
-});
-
-Route::get('/debug-migrate', function () {
-    Artisan::call('migrate:status');
-    return Artisan::output();
-});
-
-Route::get('/force-migrate', function () {
-    Artisan::call('migrate:install');
-    Artisan::call('migrate', ['--force' => true]);
-
-    return nl2br(Artisan::output());
-});
-Route::get('/seed', function () {
-    Artisan::call('db:seed', ['--force' => true]);
-    return Artisan::output();
-});
-
-Route::get('/debug-build', function () {
-    return file_exists(public_path('build/manifest.json')) 
-        ? 'BUILD EXISTS' 
-        : 'BUILD MISSING';
-        
 });

@@ -3,11 +3,13 @@ services:
     name: charity-project
     runtime: docker
     plan: free
+
     buildCommand: |
       composer install --no-dev --optimize-autoloader
       php artisan optimize:clear
       php artisan config:clear
       php artisan key:generate
-      php artisan migrate --force -vvv
-      php artisan config:cache
-    startCommand: php artisan serve --host 0.0.0.0 --port 10000
+
+    startCommand: |
+      php artisan migrate --force
+      php artisan serve --host 0.0.0.0 --port 10000

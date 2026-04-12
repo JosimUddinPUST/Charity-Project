@@ -243,3 +243,10 @@ Route::get('/debug-migrate', function () {
     Artisan::call('migrate:status');
     return Artisan::output();
 });
+
+Route::get('/force-migrate', function () {
+    Artisan::call('migrate:install');
+    Artisan::call('migrate', ['--force' => true]);
+
+    return nl2br(Artisan::output());
+});

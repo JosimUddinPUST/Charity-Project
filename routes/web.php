@@ -254,3 +254,10 @@ Route::get('/seed', function () {
     Artisan::call('db:seed', ['--force' => true]);
     return Artisan::output();
 });
+
+Route::get('/debug-build', function () {
+    return file_exists(public_path('build/manifest.json')) 
+        ? 'BUILD EXISTS' 
+        : 'BUILD MISSING';
+        
+});

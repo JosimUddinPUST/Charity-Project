@@ -9,7 +9,8 @@ services:
       php artisan optimize:clear
       php artisan config:clear
       php artisan key:generate
-
-    startCommand: |
-      php artisan migrate --force
-      php artisan serve --host 0.0.0.0 --port 10000
+      
+startCommand: >
+  php artisan migrate:install || true &&
+  php artisan migrate --force &&
+  php artisan serve --host 0.0.0.0 --port 10000

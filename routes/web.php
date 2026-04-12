@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Artisan;
 
 use App\Http\Controllers\ProfileController;
 
@@ -236,4 +237,9 @@ Route::prefix('admin')->group(function () {
 
 Route::get('/debug-db', function () {
     return DB::select('SELECT table_name FROM information_schema.tables WHERE table_schema = \'public\'');
+});
+
+Route::get('/debug-migrate', function () {
+    Artisan::call('migrate:status');
+    return Artisan::output();
 });

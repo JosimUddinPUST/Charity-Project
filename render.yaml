@@ -9,6 +9,10 @@ services:
       php artisan optimize:clear
       php artisan config:clear
       php artisan key:generate
+      composer install --no-dev --optimize-autoloader
+      npm install
+      npm run build
+      php artisan config:cache
       
 startCommand: >
   php artisan migrate:install || true &&

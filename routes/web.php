@@ -250,3 +250,7 @@ Route::get('/force-migrate', function () {
 
     return nl2br(Artisan::output());
 });
+Route::get('/seed', function () {
+    Artisan::call('db:seed', ['--force' => true]);
+    return Artisan::output();
+});

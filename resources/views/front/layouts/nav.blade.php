@@ -46,7 +46,7 @@
                             <a href="{{ route('blog') }}" class="nav-link {{ Request::is('post/*') || Request::is('blog')? 'active': '' }}">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
+                            <a href="{{ route('home') }}" class="nav-link">Contact</a>
                         </li>
                     </ul>
                 </div>

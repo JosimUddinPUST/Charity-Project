@@ -19,8 +19,8 @@
                 <div class="row">
                     <div class="col-md-6 left-side">
                         <ul>
-                            <li class="phone-text"><i class="fas fa-phone"></i> 111-222-3333</li>
-                            <li class="email-text"><i class="fas fa-envelope"></i> contact@example.com</li>
+                            <li class="phone-text"><i class="fas fa-phone"></i> +880 1788-946696</li>
+                            <li class="email-text"><i class="fas fa-envelope"></i> josimcr.200101@s.pust.ac.bd</li>
                         </ul>
                     </div>
                     <div class="col-md-6 right-side">
@@ -108,13 +108,13 @@
                                 <div class="left">
                                     <i class="fas fa-phone"></i>
                                 </div>
-                                <div class="right">contact@example.com</div>
+                                <div class="right">josimcr.200101@s.pust.ac.bd</div>
                             </div>
                             <div class="list-item">
                                 <div class="left">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <div class="right">122-222-1212</div>
+                                <div class="right">+880 1788-946696</div>
                             </div>
                             <ul class="social">
                                 <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -152,7 +152,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="copyright">
-                            Copyright &copy; 2024, CharityBig. All Rights Reserved.
+                            Copyright &copy; 2025, CharityBig. All Rights Reserved.
                         </div>
                     </div>
                 </div>

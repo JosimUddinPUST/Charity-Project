@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\ProfileController;
 
@@ -233,3 +234,6 @@ Route::prefix('admin')->group(function () {
     Route::post('/reset-password-submit', [AdminController::class, 'reset_password_submit'])->name('admin_reset_password_submit');
 });
 
+Route::get('/debug-db', function () {
+    return DB::select('SELECT table_name FROM information_schema.tables WHERE table_schema = \'public\'');
+});

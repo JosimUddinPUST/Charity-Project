@@ -57,7 +57,7 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="right">
                             <div class="inner">
-                                <a href="contact">Contact Us <i class="fas fa-long-arrow-alt-right"></i></a>
+                                <a href="{{ route('home') }}">Contact Us <i class="fas fa-long-arrow-alt-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -73,10 +73,10 @@
                             <h2 class="heading">Important Pages</h2>
                             <ul class="useful-links">
                                 <li><a href="{{ route('home') }}"><i class="fas fa-angle-right"></i> Home</a></li>
-                                <li><a href="causes"><i class="fas fa-angle-right"></i> Causes</a></li>
-                                <li><a href="events"><i class="fas fa-angle-right"></i> Events</a></li>
-                                <li><a href="volunteers"><i class="fas fa-angle-right"></i> Volunteers</a></li>
-                                <li><a href="blog"><i class="fas fa-angle-right"></i> Blog</a></li>
+                                <li><a href="{{ route('causes') }}"><i class="fas fa-angle-right"></i> Causes</a></li>
+                                <li><a href="{{ route('events') }}"><i class="fas fa-angle-right"></i> Events</a></li>
+                                <li><a href="{{ route('volunteers') }}"><i class="fas fa-angle-right"></i> Volunteers</a></li>
+                                <li><a href="{{ route('blog') }}"><i class="fas fa-angle-right"></i> Blog</a></li>
                             </ul>
                         </div>
                     </div>
@@ -85,10 +85,10 @@
                             <h2 class="heading">Useful Links</h2>
                             <ul class="useful-links">
                                 <li><a href="{{ route('faq') }}"><i class="fas fa-angle-right"></i> FAQ</a></li>
-                                <li><a href="terms.html"><i class="fas fa-angle-right"></i> Terms of Use</a></li>
-                                <li><a href="privacy.html"><i class="fas fa-angle-right"></i> Privacy Policy</a></li>
-                                <li><a href="refund.html"><i class="fas fa-angle-right"></i> Refund Policy</a></li>
-                                <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                                <li><a href="{{ route('home') }}"><i class="fas fa-angle-right"></i> Terms of Use</a></li>
+                                <li><a href="{{ route('home') }}"><i class="fas fa-angle-right"></i> Privacy Policy</a></li>
+                                <li><a href="{{ route('home') }}"><i class="fas fa-angle-right"></i> Refund Policy</a></li>
+                                <li><a href="{{ route('home') }}"><i class="fas fa-angle-right"></i> Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                                     <input type="text" name="" class="form-control" placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" class="btn btn-primary" value="Subscribe Now">
+                                    <input type="button" class="btn btn-primary" value="Subscribe Now">
                                 </div>
                             </form>
                         </div>
@@ -152,7 +152,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="copyright">
-                            Copyright &copy; 2025, CharityBig. All Rights Reserved.
+                            Copyright &copy; 2026, CharityBig. All Rights Reserved.
                         </div>
                     </div>
                 </div>

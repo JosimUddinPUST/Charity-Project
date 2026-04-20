@@ -368,10 +368,10 @@ select {
 /* Home Slider */
 .slider .item {
     position: relative;
-    height: 620px;
+    height: 460px;
     transition: all 0.5s;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: top center;
 }
 .slider .item .bg {

@@ -19,7 +19,7 @@
                                 <div class="form-group mb-3">
                                     <label>Existing Photo</label>
                                     <div>
-                                        <img src="{{ asset('uploads/'.$cause->featured_photo) }}" alt="" class="w_200">
+                                        <img src="{{ asset('uploads/'.$cause->featured_photo) }}" alt="No Image Found" class="w_200">
                                     </div>
                                 </div>
                                 <div class="form-group mb-3">

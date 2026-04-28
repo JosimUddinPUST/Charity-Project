@@ -15,7 +15,7 @@
                                         <h2>{{ $slider->heading }}</h2>
                                         <p>{!! $slider->text !!} </p>
                                         <div class="button-style-1 mt_20">
-                                            <a href="{{ $slider->button_link}}">{{ $slider->button_text }} <i class="fas fa-long-arrow-alt-right"></i></a>
+                                            <a href="{{ route('events')}}">{{ $slider->button_text }} <i class="fas fa-long-arrow-alt-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                                     <h3>{{ $special->heading }}</h3>
                                     <p>{!! $special->text!!}</p>
                                     <div class="button-style-1 mt_20">
-                                        <a href="{{ $special->button_link }}">{{ $special->button_text }} <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        <a href="{{ route('causes')}}">{{ $special->button_text }} <i class="fas fa-long-arrow-alt-right"></i></a>
                                     </div>
                                 </div>
                             </div>

@@ -10,6 +10,7 @@ use App\Models\CauseVideo;
 use App\Models\CauseFaq;
 use App\Models\CauseDonation;
 use App\Models\User;
+use Illuminate\Validation\Rule;
 
 class AdminCauseController extends Controller
 {
@@ -59,9 +60,17 @@ class AdminCauseController extends Controller
 
     public function edit_submit(Request $request, $id)
     {
+
         $request->validate([
-            'name' => ['required', 'unique:causes,name,'.$id],
-            'slug' => ['required', 'alpha_dash', 'unique:causes,slug,'.$id],
+            'name' => [
+                'required',
+                Rule::unique('causes', 'name')->ignore($id)
+            ],
+            'slug' => [
+                'required',
+                'alpha_dash',
+                Rule::unique('causes', 'slug')->ignore($id)
+            ],
             'goal' => ['required', 'numeric', 'min:1'],
             'short_description' => 'required',
             'description' => 'required',

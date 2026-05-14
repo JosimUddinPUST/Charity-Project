@@ -13,7 +13,7 @@
             Logged in as: {{ Auth::guard('web')->user()->name  }}
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 @if(Auth::guard('web')->user()->photo != null)
                     <img src="{{ asset('uploads/'.Auth::guard('web')->user()->photo) }}" alt="" class="rounded-circle-custom">
                 @else

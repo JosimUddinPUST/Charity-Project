@@ -87,7 +87,9 @@ class UserController extends Controller
     
         if (Auth::guard('web')->attempt($credentials)) {
             // If login is successful, redirect to the user dashboard
-            return redirect()->route('user_dashboard');
+            // return redirect()->route('home');
+            // return view('front.home');
+            return redirect()-> route('/home');
         } else {
             // If login fails, redirect back to the login form with an error
             return redirect()->route('user_login')->withErrors(['error' => 'Invalid credentials']);
